@@ -1,0 +1,17 @@
+{
+  "name": "Ubuntu 22.04 with Docker",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--privileged"
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker"
+      ]
+    }
+  },
+  "postCreateCommand": "dockerd-entrypoint.sh &"
+}
